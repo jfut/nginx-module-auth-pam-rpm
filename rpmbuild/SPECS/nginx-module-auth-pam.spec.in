@@ -5,7 +5,7 @@
 
 Summary: Nginx module to use PAM for simple http authentication
 Name: nginx-module-auth-pam
-Version: 1.5.1
+Version: 1.5.2
 Release: 1%{?dist}
 License: BSD-2-Clause
 URL: https://github.com/sto/ngx_http_auth_pam_module
@@ -58,5 +58,8 @@ make modules
 %doc ChangeLog LICENSE README.md VERSION
 
 %changelog
+* Wed Jun 24 2020 Jun Futagawa <jfut@integ.jp> 1.5.2-1
+- Updated to version 1.5.2
+
 * Sun Apr 19 2020 Jun Futagawa <jfut@integ.jp> 1.5.1-1
 - Initial release
