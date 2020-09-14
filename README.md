@@ -19,16 +19,20 @@ RPM Packaging for [ngx_http_auth_pam_module](https://github.com/sto/ngx_http_aut
 
 ```
 Usage:
-    build [-d] [-h] BUILD_IMAGE_NAME
+    build [-d] [-h] BUILD_IMAGE_NAME:BUILD_IMAGE_TAG[:MODULE_VERSION]
 
     Options:
         -d Debug mode.
 
-    Build for CentOS 8:
-        build -i centos:8
+    Build for CentOS 8 + AppStream module:
+        # build centos:8:1.14 1.14 (not supported)
+        build centos:8:1.16
+
+    Build for CentOS 8 + EPEL Stream module:
+        build centos:8:mainline
 
     Build for CentOS 7:
-        build -i centos:7
+        build centos:7
 ```
 
 ## Build RPM Packages with Docker
@@ -43,7 +47,7 @@ You can build RPM packages in Docker.
 
 ```
 ./build -d
-/pkg/build-rpm /pkg/rpmbuild nginx-module-auth-pam.spec
+/pkg/build-rpm /pkg/rpmbuild nginx-module-auth-pam.spec 1.16
 ```
 
 ## Release tag
