@@ -10,6 +10,8 @@ HOST_RPMBUILD_DIR="${SCRIPT_DIR}/rpmbuild"
 
 PACKAGER="$(basename "${0}")"
 
+DEBUG="no"
+
 # Usage
 usage() {
     cat << _EOF_
