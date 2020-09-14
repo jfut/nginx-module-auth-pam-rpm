@@ -1,8 +1,11 @@
-#!/bin/bash -ue
+#!/bin/bash
 #
 # Build RPM
 #
 # @author Jun Futagawa
+
+set -e
+set -u
 
 export LC_ALL=C
 

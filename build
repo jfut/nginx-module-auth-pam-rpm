@@ -1,6 +1,9 @@
-#!/bin/bash -ue
+#!/bin/bash
 #
 # Build RPM  with docker
+
+set -e
+set -u
 
 DOCKER_RPMBUILD_DIR="/pkg/rpmbuild"
 SPEC_FILE_NAME="nginx-module-auth-pam.spec"
