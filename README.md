@@ -2,22 +2,24 @@
 
 [![Build Status](https://github.com/jfut/nginx-module-auth-pam-rpm/workflows/test/badge.svg?branch=master)](https://github.com/jfut/nginx-module-auth-pam-rpm/actions?query=workflow%3Atest)
 
-RPM Packaging for [ngx_http_auth_pam_module](https://github.com/sto/ngx_http_auth_pam_module).
+[ngx_http_auth_pam_module](https://github.com/sto/ngx_http_auth_pam_module) RPM Packaging for RHEL/CentOS/others.
 
 ## Install an RPM package
 
 - [Download](https://github.com/jfut/nginx-module-auth-pam-rpm/releases)
-- `yum install nginx-module-auth-pam-1.5.2-n.elx.x86_64.rpm`
 - Install:
     ```
     # el7
-    yum install nginx-module-auth-pam-1.5.2-2.el7.x86_64.rpm
+    yum install nginx-module-auth-pam-1.5.2-3.el7.x86_64.rpm
 
     # el8 + module 1.16 stream
-    dnf install nginx-module-auth-pam-1.5.2-2.module_el8.1.16.x86_64.rpm
+    dnf install nginx-module-auth-pam-1.5.2-3.module_el8.1.16.x86_64.rpm
+
+    # el8 + module 1.18 stream
+    dnf install nginx-module-auth-pam-1.5.2-3.module_el8.1.18.x86_64.rpm
 
     # el8 + EPEL module mainline stream
-    dnf install nginx-module-auth-pam-1.5.2-2.module_el8.mainline.x86_64.rpm
+    dnf install nginx-module-auth-pam-1.5.2-3.module_el8.mainline.x86_64.rpm
     ```
 - Add `load_module` in `nginx.conf`:
     ```
@@ -52,7 +54,7 @@ Usage:
 You can build RPM packages in Docker.
 
 ```
-./build
+./build centos:8:1.18
 ```
 
 - Debug shell
@@ -67,8 +69,8 @@ You can build RPM packages in Docker.
 e.g.:
 
 ```
-git tag -a v1.5.2-2 -m "v1.5.2-2"
-git push origin refs/tags/v1.5.2-2
+git tag -a v1.5.2-3 -m "v1.5.2-3"
+git push origin refs/tags/v1.5.2-3
 ```
 
 ## License

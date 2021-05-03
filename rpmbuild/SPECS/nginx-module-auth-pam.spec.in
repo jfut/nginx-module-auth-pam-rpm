@@ -6,7 +6,7 @@
 Summary: Nginx module to use PAM for simple http authentication
 Name: nginx-module-auth-pam
 Version: 1.5.2
-Release: 2%{?dist}
+Release: 3%{?dist}
 License: BSD-2-Clause
 URL: https://github.com/sto/ngx_http_auth_pam_module
 
@@ -58,6 +58,9 @@ make modules
 %doc ChangeLog LICENSE README.md VERSION
 
 %changelog
+* Mon May  3 2021 Jun Futagawa <jfut@integ.jp> 1.5.2-3
+- Add build for nginx 1.18 of CentOS 8 AppStream module
+
 * Mon Sep 14 2020 Jun Futagawa <jfut@integ.jp> 1.5.2-2
 - Add support for module versions on el8 #1
 
