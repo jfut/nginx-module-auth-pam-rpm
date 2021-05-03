@@ -36,8 +36,9 @@ Usage:
         -d Debug mode.
 
     Build for CentOS 8 + AppStream module:
-        # build centos:8:1.14 1.14 (not supported)
+        # build centos:8:1.14 (not supported)
         build centos:8:1.16
+        build centos:8:1.18
 
     Build for CentOS 8 + EPEL Stream module:
         build centos:8:mainline
@@ -57,8 +58,8 @@ You can build RPM packages in Docker.
 - Debug shell
 
 ```
-./build -d
-/pkg/build-rpm /pkg/rpmbuild nginx-module-auth-pam.spec 1.16
+./build -d centos:8:1.18
+/pkg/build-rpm /pkg/rpmbuild nginx-module-auth-pam.spec 1.18
 ```
 
 ## Release tag
