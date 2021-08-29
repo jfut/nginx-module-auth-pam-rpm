@@ -10,16 +10,16 @@
 - Install:
     ```
     # el7
-    yum install nginx-module-auth-pam-1.5.2-3.el7.x86_64.rpm
+    yum install nginx-module-auth-pam-1.5.3-1.el7.x86_64.rpm
 
     # el8 + module 1.16 stream
-    dnf install nginx-module-auth-pam-1.5.2-3.module_el8.1.16.x86_64.rpm
+    dnf install nginx-module-auth-pam-1.5.3-1.module_el8.1.16.x86_64.rpm
 
     # el8 + module 1.18 stream
-    dnf install nginx-module-auth-pam-1.5.2-3.module_el8.1.18.x86_64.rpm
+    dnf install nginx-module-auth-pam-1.5.3-1.module_el8.1.18.x86_64.rpm
 
     # el8 + EPEL module mainline stream
-    dnf install nginx-module-auth-pam-1.5.2-3.module_el8.mainline.x86_64.rpm
+    dnf install nginx-module-auth-pam-1.5.3-1.module_el8.mainline.x86_64.rpm
     ```
 - Add `load_module` in `nginx.conf`:
     ```
@@ -69,8 +69,8 @@ You can build RPM packages in Docker.
 e.g.:
 
 ```
-git tag -a v1.5.2-3 -m "v1.5.2-3"
-git push origin refs/tags/v1.5.2-3
+git tag -a v1.5.3-1 -m "v1.5.3-1"
+git push origin refs/tags/v1.5.3-1
 ```
 
 ## License
