@@ -17,6 +17,9 @@ Requires: nginx = 1:%{nginx_version}
 BuildRequires: autoconf
 BuildRequires: automake
 BuildRequires: gd-devel
+%if 0%{?rhel} == 7
+BuildRequires: gperftools-devel
+%endif
 BuildRequires: libtool
 BuildRequires: libxslt-devel
 BuildRequires: nginx
@@ -59,7 +62,6 @@ make modules
 %changelog
 * Thu Dec  2 2021 Jun Futagawa <jfut@integ.jp> 1.5.3-2
 - Change the package naming convention for EPEL module to avoid conflicts with AppStream module #2
-- Remove BuildRequires: gperftools-devel
 
 * Sun Aug 29 2021 Jun Futagawa <jfut@integ.jp> 1.5.3-1
 - Updated to version 1.5.3
