@@ -12,13 +12,13 @@
     # el7
     yum install nginx-module-auth-pam-1.5.3-2.el7.x86_64.rpm
 
-    # el8 + module 1.16 stream
+    # el8 + AppStream module 1.16 stream
     dnf install nginx-module-auth-pam-1.5.3-2.module_el8.1.16.x86_64.rpm
 
-    # el8 + module 1.18 stream
+    # el8 + AppStream module 1.18 stream
     dnf install nginx-module-auth-pam-1.5.3-2.module_el8.1.18.x86_64.rpm
 
-    # el8 + module 1.20 stream
+    # el8 + AppStream module 1.20 stream
     dnf install nginx-module-auth-pam-1.5.3-2.module_el8.1.20.x86_64.rpm
 
     # el8 + EPEL module mainline stream
@@ -52,9 +52,6 @@ Usage:
     Build for CentOS 8 + EPEL Stream module:
         build centos:8:epel-modular:mainline
         build centos:8:epel-modular:1.20
-
-    Build for CentOS 8 + EPEL Stream module:
-        build centos:8:mainline
 
     Build for CentOS 7:
         build centos:7
