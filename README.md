@@ -22,10 +22,10 @@
     dnf install nginx-module-auth-pam-1.5.3-2.module_el8.1.20.x86_64.rpm
 
     # el8 + EPEL module mainline stream
-    dnf install nginx-module-auth-pam-1.5.3-2.module_el8.epel-mainline.x86_64.rpm
+    dnf install nginx-module-auth-pam-1.5.3-2.module_el8.epel.mainline.x86_64.rpm
 
     # el8 + EPEL module 1.20 stream
-    dnf install nginx-module-auth-pam-1.5.3-2.module_el8.epel-1.20.x86_64.rpm
+    dnf install nginx-module-auth-pam-1.5.3-2.module_el8.epel.1.20.x86_64.rpm
     ```
 - Add `load_module` in `nginx.conf`:
     ```
@@ -44,9 +44,14 @@ Usage:
         -d Debug mode.
 
     Build for CentOS 8 + AppStream module:
-        # build centos:8:1.14 (not supported)
-        build centos:8:1.16
-        build centos:8:1.18
+        # build centos:8:appstream:1.14 (not supported)
+        build centos:8:appstream:1.16
+        build centos:8:appstream:1.18
+        build centos:8:appstream:1.20
+
+    Build for CentOS 8 + EPEL Stream module:
+        build centos:8:epel-modular:mainline
+        build centos:8:epel-modular:1.20
 
     Build for CentOS 8 + EPEL Stream module:
         build centos:8:mainline
