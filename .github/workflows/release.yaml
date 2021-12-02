@@ -28,9 +28,11 @@ jobs:
       matrix:
         image:
           - centos-7
-          - centos-8-1.16
-          - centos-8-1.18
-          - centos-8-mainline
+          - centos-8-appstream-1.16
+          - centos-8-appstream-1.18
+          - centos-8-appstream-1.20
+          - centos-8-epel-modular-mainline
+          - centos-8-epel-modular-1.20
 
     env:
       BUILD_IMAGE: ${{ matrix.image }}
