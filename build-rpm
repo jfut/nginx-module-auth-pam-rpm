@@ -13,7 +13,7 @@ BUILD_PACKAGES="autoconf automake libtool gcc make rpm-build rpmdevtools"
 MAX_RETRY="10"
 
 if [[ $# -lt 2 ]]; then
-    echo $0 RPMBUILD_DIR SPEC_FILE_NAME [MODULE_VERSION]
+    echo $0 RPMBUILD_DIR SPEC_FILE_NAME [REPOSITORY] [MODULE_VERSION]
     exit 1
 fi
 
@@ -37,7 +37,6 @@ if [[ -f /usr/bin/dnf ]]; then
         echo "Error: MODULE_VERSION is required for el8 or later"
         exit 1
     fi
-    echo
 
     # install epel-release
     if [[ "${REPOSITORY}" = "epel-modular" ]]; then
@@ -46,6 +45,7 @@ if [[ -f /usr/bin/dnf ]]; then
     fi
 
     # install nginx
+    echo
     dnf -y module reset nginx
     echo "Installing nginx:${MODULE_VERSION} on ${REPOSITORY}"
     dnf -y module install nginx:${MODULE_VERSION}/common
