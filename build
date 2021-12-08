@@ -31,8 +31,8 @@ Usage:
         ${PACKAGER} centos:8:appstream:1.20
 
     Build for CentOS 8 + EPEL Stream module:
-        ${PACKAGER} centos:8:epel-modular:mainline
         ${PACKAGER} centos:8:epel-modular:1.20
+        ${PACKAGER} centos:8:epel-modular:mainline
 
     Build for CentOS 7:
         ${PACKAGER} centos:7
