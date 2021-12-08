@@ -62,14 +62,14 @@ Usage:
 You can build RPM packages in Docker.
 
 ```
-./build centos:8:1.20
+./build centos:8:appstream:1.20
 ```
 
 - Debug shell
 
 ```
-./build -d centos:8:1.20
-/pkg/build-rpm /pkg/rpmbuild nginx-module-auth-pam.spec 1.20
+./build -d centos:8:appstream:1.20
+/pkg/build-rpm /pkg/rpmbuild nginx-module-auth-pam.spec appstream 1.20
 ```
 
 ## Release tag
