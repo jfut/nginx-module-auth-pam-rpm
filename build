@@ -19,7 +19,7 @@ DEBUG="no"
 usage() {
     cat << _EOF_
 Usage:
-    ${PACKAGER} [-d] [-h] BUILD_IMAGE_NAME:REPOSITORY:BUILD_IMAGE_TAG[:MODULE_VERSION]
+    ${PACKAGER} [-d] [-h] BUILD_IMAGE_NAME:BUILD_IMAGE_TAG[:REPOSITORY][:MODULE_VERSION]
 
     Options:
         -d Debug mode.
