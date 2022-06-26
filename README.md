@@ -46,20 +46,20 @@ Usage:
     Options:
         -d Debug mode.
 
-    Build for RHEL/AlmaLinux/Rocky 9 + AppStream module:
+    Build for RHEL/AlmaLinux/Rocky Linux 9 + AppStream module:
         build almalinux:9:appstream:1.20
 
-    Build for RHEL/AlmaLinux/Rocky 8 + AppStream module:
+    Build for RHEL/AlmaLinux/Rocky Linux 8 + AppStream module:
         # build almalinux:8:appstream:1.14 (not supported)
         build almalinux:8:appstream:1.16
         build almalinux:8:appstream:1.18
         build almalinux:8:appstream:1.20
 
-    Build for CentOS 8 + EPEL Stream module:
+    Build for RHEL/AlmaLinux/Rocky Linux 8 + EPEL Stream module:
         build almalinux:8:epel-modular:1.20
         build almalinux:8:epel-modular:mainline
 
-    Build for CentOS 7:
+    Build for RHEL/CentOS 7:
         build centos:7
 ```
 
