@@ -11,32 +11,32 @@
     - RHEL/AlmaLinux/Rocky Linux 9
     ```bash
     # Non-modular package version 1.20
-    dnf install nginx-module-auth-pam-1.5.3-4.el9.x86_64.rpm
+    dnf install nginx-module-auth-pam-1.5.5-1.el9.x86_64.rpm
 
     # AppStream module 1.22 stream
-    dnf install nginx-module-auth-pam-1.5.3-4.module_el9.1.20.x86_64.rpm
+    dnf install nginx-module-auth-pam-1.5.5-1.module_el9.1.22.x86_64.rpm
     ```
     - RHEL/AlmaLinux/Rocky Linux 8
     ```bash
     # AppStream module 1.16 stream
-    dnf install nginx-module-auth-pam-1.5.3-4.module_el8.1.16.x86_64.rpm
+    dnf install nginx-module-auth-pam-1.5.5-1.module_el8.1.16.x86_64.rpm
 
     # AppStream module 1.18 stream
-    dnf install nginx-module-auth-pam-1.5.3-4.module_el8.1.18.x86_64.rpm
+    dnf install nginx-module-auth-pam-1.5.5-1.module_el8.1.18.x86_64.rpm
 
     # AppStream module 1.20 stream
-    dnf install nginx-module-auth-pam-1.5.3-4.module_el8.1.20.x86_64.rpm
+    dnf install nginx-module-auth-pam-1.5.5-1.module_el8.1.20.x86_64.rpm
 
     # AppStream module 1.22 stream
-    dnf install nginx-module-auth-pam-1.5.3-4.module_el8.1.22.x86_64.rpm
+    dnf install nginx-module-auth-pam-1.5.5-1.module_el8.1.22.x86_64.rpm
 
     # EPEL module mainline stream (version: 1.23)
     # EPEL 8 Modularity was going away on February 15, 2023
-    dnf install nginx-module-auth-pam-1.5.3-4.module_el8.epel.mainline.x86_64.rpm
+    dnf install nginx-module-auth-pam-1.5.5-1.module_el8.epel.mainline.x86_64.rpm
     ```
     - RHEL/CentOS 7
     ```bash
-    yum install nginx-module-auth-pam-1.5.3-4.el7.x86_64.rpm
+    yum install nginx-module-auth-pam-1.5.5-1.el7.x86_64.rpm
     ```
 - Add `load_module` in `nginx.conf`:
     ```
@@ -95,8 +95,8 @@ You can build RPM packages in Docker.
 e.g.:
 
 ```
-git tag -a v1.5.3-4 -m "v1.5.3-4"
-git push origin refs/tags/v1.5.3-4
+git tag -a v1.5.5-1 -m "v1.5.5-1"
+git push origin refs/tags/v1.5.5-1
 ```
 
 ## License
