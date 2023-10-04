@@ -9,7 +9,7 @@
 Summary: Nginx module to use PAM for simple http authentication
 Name: nginx-module-auth-pam
 Version: 1.5.5
-Release: 2%{?dist}
+Release: 3%{?dist}
 License: BSD-2-Clause
 URL: https://github.com/sto/ngx_http_auth_pam_module
 
@@ -58,7 +58,7 @@ make modules
     ${RPM_BUILD_ROOT}%{nginx_moduledir}/ngx_http_auth_pam_module.so
 
 echo 'load_module "%{nginx_moduledir}/ngx_http_auth_pam_module.so";' \
-    > %{buildroot}%{nginx_moduleconfdir}/mod-auth-pam.conf
+    > %{buildroot}%{nginx_moduleconfdir}/mod-http-auth-pam.conf
 
 %clean
 %{__rm} -rf %{buildroot}
@@ -70,6 +70,9 @@ echo 'load_module "%{nginx_moduledir}/ngx_http_auth_pam_module.so";' \
 %config(noreplace) %{nginx_moduleconfdir}/mod-*.conf
 
 %changelog
+* Wed Oct  4 2023 Jun Futagawa <jfut@integ.jp> 1.5.5-3
+- Rename default configuration file (#7)
+
 * Wed Oct  4 2023 Jun Futagawa <jfut@integ.jp> 1.5.5-2
 - Add default configuration file (#7)
 
