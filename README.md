@@ -40,7 +40,7 @@
     ```
 - Add your configuration for this module (See [the official documentation](https://github.com/sto/ngx_http_auth_pam_module)).
 - Restart nginx:
-    ```
+    ```bash
     systemctl restart nginx.service
     ```
 
@@ -103,14 +103,14 @@ BUILD_HOSTNAME=el8.example.org ./build -d almalinux:8:appstream:1.22
 /pkg/build-rpm /pkg/rpmbuild nginx-module-auth-pam.spec appstream 1.22
 ```
 
-## Release tag
+## Release
 
-e.g.:
-
-```
-git tag -a v1.5.5-3 -m "v1.5.5-3"
-git push origin refs/tags/v1.5.5-3
-```
+1. Edit the `Draft` on the release page.
+2. Update the new version `name` and `tag` on the edit page.
+3. Check `Set as a pre-release` and press the `Publish release` button.
+4. Wait for the build by GitHub Actions to finish.
+    - If the build fails due to errors such as download errors of source files, execute `Re-run failed jobs`.
+5. Once all release files are automatically uploaded, check `Set as the latest release` and press the `Publish release` button.
 
 ## License
 
