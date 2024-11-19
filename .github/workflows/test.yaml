@@ -27,8 +27,8 @@ jobs:
           - almalinux_9
           - almalinux_9_appstream_1.22
         arch:
-          - amd64
-          - arm64v8
+          - linux/amd64
+          - linux/arm64/v8
 
     env:
       BUILD_IMAGE: ${{ matrix.image }}
@@ -47,8 +47,11 @@ jobs:
         run: |
           ./build -p ${{ matrix.arch }} $(echo ${BUILD_IMAGE} | sed 's/_/:/g')
 
+      - name: Normalize artifact name
+        run: echo "ARTIFACT_NAME=$(echo ${{ matrix.image }}-${{ matrix.arch }} | sed 's/\//-/g')" >> $GITHUB_ENV
+
       - name: Upload artifacts
         uses: actions/upload-artifact@b4b15b8c7c6ac21ea08fcf65892d2ee8f75cf882 # v4.4.3
         with:
-          name: ${{ matrix.image }}-${{ matrix.arch }}
+          name: ${{ env.ARTIFACT_NAME }}
           path: rpmbuild/**/*.rpm
