@@ -73,6 +73,7 @@ echo 'load_module "%{nginx_moduledir}/ngx_http_auth_pam_module.so";' \
 %changelog
 * Wed Nov 20 2024 Jun Futagawa <jfut@integ.jp> 1.5.5-5
 - feat: add support for RHEL/AlmaLinux/Rocky Linux 9.5 @jfut (#17)
+- feat: add support for nginx 1.24 @jfut (#19)
 
 * Sun Feb 25 2024 Jun Futagawa <jfut@integ.jp> 1.5.5-4
 - feat: add support for arm64v8(aarch64) @jfut (#9)
