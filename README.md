@@ -1,6 +1,7 @@
 # nginx-module-auth-pam RPM Packaging
 
-[![Build Status](https://github.com/jfut/nginx-module-auth-pam-rpm/workflows/test/badge.svg?branch=master)](https://github.com/jfut/nginx-module-auth-pam-rpm/actions?query=workflow%3Atest)
+![Tag](https://img.shields.io/github/tag/jfut/nginx-module-auth-pam-rpm.svg)
+[![License](https://img.shields.io/badge/License-BSD--2--Clause-blue)](https://github.com/jfut/nginx-module-fancyindex-rpm/blob/main/LICENSE)
 
 [ngx_http_auth_pam_module](https://github.com/sto/ngx_http_auth_pam_module) RPM Packaging for RHEL/AlmaLinux/Rocky Linux/others.
 
