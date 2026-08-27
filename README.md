@@ -20,9 +20,12 @@ rpm --import https://raw.githubusercontent.com/jfut/nginx-module-auth-pam-rpm/re
 dnf-anyrepo add https://github.com/jfut/nginx-module-auth-pam-rpm
 ```
 
-If you use an AppStream module, configure `asset_include` for the nginx stream you use. For example:
+For RHEL, AlmaLinux, and Rocky Linux 8 or 9, configure `asset_include` to select the package or the nginx AppStream stream you use. For example:
 
 ```bash
+# Example: non-modular nginx package on EL 8 or 9
+dnf-anyrepo repo nginx-module-auth-pam-rpm set asset_include '^(?!.*module_).*\.rpm$'
+
 # Example: AppStream module nginx 1.24 stream
 dnf-anyrepo repo nginx-module-auth-pam-rpm set asset_include '\.1\.24\..*\.rpm$'
 
